@@ -6,7 +6,7 @@ import os
 
 print("ENV CHECK:", os.environ)
 TOKEN = os.environ.get("8692752593:AAEpYKR7opjqlsBvtFsGIZKP-V4TYjTJXcc")
-print("TOKEN:", TOKEN)
+print("8692752593:AAEpYKR7opjqlsBvtFsGIZKP-V4TYjTJXcc:", TOKEN)
 
 app = ApplicationBuilder().token(TOKEN).build()
 

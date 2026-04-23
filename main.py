@@ -13,7 +13,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     ]
 
     await update.message.reply_text(
-        "🎮 Sambung Kata",
+        "🎮 Sambung Kata\n\nPilih mode:",
         reply_markup=InlineKeyboardMarkup(keyboard)
     )
 
@@ -23,6 +23,9 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if query.data == "quick":
         await query.edit_message_text("⏳ Mencari lawan...")
+
+    elif query.data == "create":
+        await query.edit_message_text("👥 Mode room (next step)")
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(button_handler))

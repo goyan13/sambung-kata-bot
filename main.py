@@ -5,8 +5,8 @@ import os
 import os
 
 print("ENV CHECK:", os.environ)
-TOKEN = os.environ.get("8692752593:AAEpYKR7opjqlsBvtFsGIZKP-V4TYjTJXcc")
-print("8692752593:AAEpYKR7opjqlsBvtFsGIZKP-V4TYjTJXcc", TOKEN)
+TOKEN = os.environ.get("8692752593:AAFpYyuyuZ7c1TBJ7W1Y5EXRrNZ95w9KY-E")
+print("8692752593:AAFpYyuyuZ7c1TBJ7W1Y5EXRrNZ95w9KY-E", TOKEN)
 
 app = ApplicationBuilder().token(TOKEN).build()
 

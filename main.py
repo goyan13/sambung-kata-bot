@@ -4,6 +4,8 @@ import os
 
 TOKEN = os.getenv("8692752593:AAEpYKR7opjqlsBvtFsGIZKP-V4TYjTJXcc")
 
+print("TOKEN:", TOKEN)
+
 app = ApplicationBuilder().token(TOKEN).build()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):

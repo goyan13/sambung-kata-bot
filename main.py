@@ -2,11 +2,10 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandler, ContextTypes
 import os
 
-import os
+TOKEN = "8692752593:AAG2wm6wxwb2jSUHKY1QB_5YW8FLD5JcGDs"  # pastikan sudah diset di environment
 
-print("ENV CHECK:", os.environ)
-TOKEN = os.environ.get("8692752593:AAFpYyuyuZ7c1TBJ7W1Y5EXRrNZ95w9KY-E")
-print("8692752593:AAFpYyuyuZ7c1TBJ7W1Y5EXRrNZ95w9KY-E", TOKEN)
+if not TOKEN:
+    raise ValueError("TOKEN tidak ditemukan! Set BOT_TOKEN di environment variable.")
 
 app = ApplicationBuilder().token(TOKEN).build()
 
